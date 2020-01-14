@@ -43,4 +43,13 @@ According to the manual: "PEAR outputs four files. A file containing the assembl
 
 # Parsing the overlap
 
-The next step is to process the merged file using a script to search for microsats using a regex.  Depending on discussions with Jim and Blaine, we could look first for "pure" tetramers, or whatever. I need to work on this.
+The next step is to process the merged file using a script to search for microsats using a regex.  Depending on discussions with Jim and Blaine, we could look first for "pure" tetramers, or whatever. I found a script that does this here: `https://webblast.ipk-gatersleben.de/misa/`
+
+The output of PEAR is fastq. I can make a sample file to work with like thiis:
+```
+head -1000 input.fastq > output.fastq
+```
+I need to convert fastq to fasta format like this:
+```
+sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
+```
