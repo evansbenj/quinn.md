@@ -40,3 +40,7 @@ sbatch PEAR_sbatch.sh ./60YGXHF/LAN10690/190705_E00386_0372_AH2VYYCCX2/2B_Shakes
 sbatch PEAR_sbatch.sh ./60YGXHF/LAN10690/190705_E00386_0372_AH2VYYCCX2/3C_South_Island_S3_L001_R1_001.fastq.gz ./60YGXHF/LAN10690/190705_E00386_0372_AH2VYYCCX2/3C_South_Island_S3_L001_R2_001.fastq.gz South_Island
 ```
 According to the manual: "PEAR outputs four files. A file containing the assembled reads with a assembled.fastq extension, two files containing the forward, resp. reverse, unassembled reads with extensions unassembled.forward.fastq, resp. unassembled.reverse.fastq, and a file containing the discarded reads with a discarded.fastq extension"
+
+# Parsing the overlap
+
+The next step is to process the merged file using a script to search for microsats using a regex.  Depending on discussions with Jim and Blaine, we could look first for "pure" tetramers, or whatever. I need to work on this.
