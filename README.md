@@ -53,3 +53,8 @@ I need to convert fastq to fasta format like this:
 ```
 sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
 ```
+
+Then, to check the fasta file, use grep:
+```
+grep -A 1 'E00386:372:H2VYYCCX2:1:1101:8633:2030' OUTFILE.fasta
+```
