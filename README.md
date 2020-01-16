@@ -38,7 +38,7 @@ module load gcc/5.4.0
 module load pear/0.9.10
 
 
-pear --forward-fastq$1 --reverse-fastq $2 --output $3
+pear --forward-fastq $1 --reverse-fastq $2 --output $3
 
 ```
 
