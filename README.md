@@ -19,7 +19,9 @@ I am working on graham in this directory:
 ```
 
 # PEAR
-First step is to merge the overlapping portion of paired fastq files. Here is a sbatch script for this:
+First step is to merge the overlapping portion of paired fastq files. I used a program called PEAR for this (https://cme.h-its.org/exelixis/web/software/pear/doc.html).
+
+Here is a sbatch script for this:
 ```
 #!/bin/sh
 #SBATCH --job-name=PEAR
