@@ -66,8 +66,17 @@ I need to convert fastq to fasta format like this:
 ```
 sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
 ```
+To run misa, I am working in this directory:
+```
+/home/ben/scratch/quinn_stuff/misa_sourcecode_22092015
+```
+To execute misa I typed this: 
+```
+./misa.pl ../test.fasta
+```
+This generated one file per microsat in the wording directory.
 
-Then, to check the fasta file, use grep:
+Then, to check the fasta file for an individual microsatellite, use grep:
 ```
 grep -A 1 'E00386:372:H2VYYCCX2:1:1101:8633:2030' OUTFILE.fasta
 ```
