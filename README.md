@@ -1,3 +1,14 @@
+# For Jim and Blaine
+to connect to graham
+```
+ssh ben@graham.comoputecanada.ca
+```
+
+To change a directory type 'cd <directory name.'
+To list the contents type `ls`
+To print the working diretory type `pwd`
+
+
 # Micros from nextgen
 
 This is a repo to document steps taken to pull out microsats from Illumina seqs from pukekos.
