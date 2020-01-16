@@ -4,7 +4,7 @@ to connect to graham
 ssh ben@graham.comoputecanada.ca
 ```
 
-To change a directory type 'cd <directory name.'
+To change a directory type `cd <directory name.`
 To list the contents type `ls`
 To print the working diretory type `pwd`
 
