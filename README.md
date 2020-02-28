@@ -65,6 +65,9 @@ head -1000 input.fastq > output.fastq
 I need to convert fastq to fasta format like this:
 ```
 sed -n '1~4s/^@/>/p;2~4p' INFILE.fastq > OUTFILE.fasta
+sed -n '1~4s/^@/>/p;2~4p' Tawharanui.assembled.fastq > Tawharanui.assembled.fasta
+sed -n '1~4s/^@/>/p;2~4p' Shakespear.assembled.fastq > Shakespear.assembled.fasta
+sed -n '1~4s/^@/>/p;2~4p' South_Island.assembled.fastq > South_Island.assembled.fasta
 ```
 To run misa, I am working in this directory:
 ```
@@ -73,8 +76,17 @@ To run misa, I am working in this directory:
 To execute misa I typed this: 
 ```
 ./misa.pl ../test.fasta
+./misa.pl ../Tawharanui.assembled.fasta
+./misa.pl ../Shakespear.assembled.fasta
+./misa.pl ../South_Island.assembled.fasta
 ```
-This generated one file per microsat in the wording directory.
+This generated one file per microsat in the wording directory.  I moveed these to their own directory like this:
+
+```
+mkdir Tawharanui_microsats
+mkdir Shakespear_microsats
+mkdir South_Island_microsats
+```
 
 Then, to check the fasta file for an individual microsatellite, use grep:
 ```
