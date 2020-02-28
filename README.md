@@ -77,7 +77,26 @@ To execute misa I typed this:
 ```
 ./misa.pl ../test.fasta
 ./misa.pl ../Tawharanui.assembled.fasta
-./misa.pl ../Shakespear.assembled.fasta
+```
+or from this directory: `/home/ben/scratch/quinn_stuff/misa_sourcecode_22092015/Shakespear_microsats`
+```
+sbatch misa_sbatch.sh ../../Shakespear.assembled.fasta
+```
+where `misa_sbatch.sh` is this:
+```
+#!/bin/sh
+#SBATCH --job-name=misa
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --time=12:00:00
+#SBATCH --mem=16gb
+#SBATCH --output=misa.%J.out
+#SBATCH --error=misa.%J.err
+#SBATCH --account=def-ben
+
+../misa $1 
+```
+
 ./misa.pl ../South_Island.assembled.fasta
 ```
 This generated one file per microsat in the wording directory.  I moveed these to their own directory like this:
