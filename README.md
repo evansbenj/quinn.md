@@ -222,3 +222,20 @@ foreach(@files){
 # close the output file
 close OUTFILE;
 ```
+
+
+And we can check how many micros there are that haev 4, 5, 6, 7 or 8 repeats like this:
+```
+[ben@gra-login3 Tawharanui_microsats]$ grep -P '\t4$' good_micros.txt | wc -l
+13654
+[ben@gra-login3 Tawharanui_microsats]$ grep -P '\t5$' good_micros.txt | wc -l
+3458
+[ben@gra-login3 Tawharanui_microsats]$ grep -P '\t6$' good_micros.txt | wc -l
+1228
+[ben@gra-login3 Tawharanui_microsats]$ grep -P '\t7$' good_micros.txt | wc -l
+579
+[ben@gra-login3 Tawharanui_microsats]$ grep -P '\t8$' good_micros.txt | wc -l
+321
+```
+
+Having the -P flag tells grep to recognize the '\t' like perl and the $ tells grep to only count the ones on the end.
