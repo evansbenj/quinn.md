@@ -96,7 +96,7 @@ where `misa_sbatch.sh` is this:
 
 ../misa $1 
 ```
-
+```
 ./misa.pl ../South_Island.assembled.fasta
 ```
 This generated one file per microsat in the wording directory.  I moveed these to their own directory like this:
