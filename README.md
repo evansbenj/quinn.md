@@ -239,3 +239,16 @@ And we can check how many micros there are that haev 4, 5, 6, 7 or 8 repeats lik
 ```
 
 Having the -P flag tells grep to recognize the '\t' like perl and the $ tells grep to only count the ones on the end.
+
+# Getting sequences
+
+First lets get the names of the sequence that have 8 tetramer micros:
+
+```
+grep -P '\t8$' good_micros.txt | cut -f 1 | rev | cut -c 5- | rev > Tawharanui_8_repeat_tetrameeer_names.txt
+```
+
+Now we can use this file to harvest the fasta seqs like this:
+```
+while read IDS ; do grep -A 1 "\b$IDS\b" ../../Tawharanui.assembled.fasta ; done < Tawharanui_8_repeat_tetrameeer_names.txt > Tawharanui_8_repeat_tetrameer.fasta
+```
