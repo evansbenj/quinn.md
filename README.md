@@ -1,7 +1,7 @@
 # For Jim and Blaine
 to connect to graham
 ```
-ssh ben@graham.comoputecanada.ca
+ssh ben@graham.computecanada.ca
 ```
 
 To change a directory type `cd <directory name.`
