@@ -1,27 +1,10 @@
-# For Jim and Blaine
-to connect to graham
-```
-ssh ben@graham.computecanada.ca
-```
-
-To change a directory type `cd <directory name.`
-To list the contents type `ls`
-To print the working diretory type `pwd`
-
-
 # Micros from nextgen
 
 This is a repo to document steps taken to pull out microsats from Illumina seqs from pukekos.
 
-I am working on graham in this directory:
-```
-/home/ben/scratch/quinn_stuff
-```
-
 # PEAR
 First step is to merge the overlapping portion of paired fastq files. I used a program called PEAR for this (https://cme.h-its.org/exelixis/web/software/pear/doc.html).
 
-Here is a sbatch script for this:
 ```
 #!/bin/sh
 #SBATCH --job-name=PEAR
